@@ -267,13 +267,13 @@ img {
   height: 62px;
   width: 92px;
   background: linear-gradient(to right, #00aedb 40px, #b5da06 40px 66px, #00aedb 66px 92px);
-  background-image: url("../img/group1.png"); }
+  background-image: url("../img/Group1.png"); }
 
 .logo__back:nth-child(2) {
   height: 54px;
   width: 96px;
   background: linear-gradient(to right, #b5da06 32px, #00aedb 32px 44px, #b5da06 44px 70px, #00aedb 70px 98px);
-  background-image: url("../img/group2.png"); }
+  background-image: url("../img/Group2.png"); }
 
 .logo b {
   position: absolute;
