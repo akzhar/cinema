@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  padding-top: 29px;
+  margin-bottom: 22px;
+}
+
+@media(min-width: $width-2) {
+  .header {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+}

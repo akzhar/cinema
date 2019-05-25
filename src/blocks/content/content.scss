@@ -1,0 +1,19 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media(min-width: $width-2) {
+  .content {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .content__review {
+    width: 648px;
+  }
+
+  .content__aside {
+    width: 328px;
+  }
+}

@@ -1,0 +1,112 @@
+.interesting {
+  margin: 10px 0 12px 0;
+}
+
+.interesting input[type="radio"] {
+  display: none;
+}
+
+.interesting__header {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  margin: 0 0 4px 0;
+  padding: 0 62px 0 18px;
+
+  background-color: $violet;
+
+  font-size: 19px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 400;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+
+    border: 20px solid transparent;
+    border-top: 20px solid #ffffff;
+    border-right: 20px solid #ffffff;
+  }
+}
+
+.interesting__menu {
+  display: flex;
+}
+
+.interesting__menu label {
+  position: relative;
+
+  min-width: 99px;
+
+  font-size: 18px;
+  line-height: 37px;
+  text-align: center;
+
+  padding: 0 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.interesting input[type="radio"]:checked~.interesting__menu > label::after {
+  position: absolute;
+  content: "";
+  bottom: -16px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 10px solid transparent;
+}
+
+.interesting input[type="radio"]:nth-of-type(1):checked~.interesting__menu > label:nth-of-type(1)::after {
+  border-top-color: $pink;
+}
+
+.interesting input[type="radio"]:nth-of-type(2):checked~.interesting__menu > label:nth-of-type(2)::after {
+  border-top-color: $orange;
+}
+
+.interesting input[type="radio"]:nth-of-type(3):checked~.interesting__menu > label:nth-of-type(3)::after {
+  border-top-color: $blue;
+}
+
+.interesting__menu label:nth-of-type(1) {
+  background-color: $pink;
+}
+
+.interesting__menu label:nth-of-type(2) {
+  background-color: $orange;
+}
+
+.interesting__menu label:last-child {
+  background-color: $blue;
+
+  flex-grow: 1;
+}
+
+.interesting input[type="radio"]~.news--fashion,
+.interesting input[type="radio"]~.news--movie,
+.interesting input[type="radio"]~.news--tv {
+  display: none;
+}
+
+.interesting input[type="radio"]:nth-of-type(1):checked~.news--fashion,
+.interesting input[type="radio"]:nth-of-type(2):checked~.news--movie,
+.interesting input[type="radio"]:nth-of-type(3):checked~.news--tv {
+  display: block;
+}

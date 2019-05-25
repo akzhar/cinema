@@ -1,0 +1,50 @@
+.logo {
+  display: flex;
+  align-items: flex-end;
+
+  margin: 0 20px 0 0;
+
+  position: relative;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__back:nth-child(1) {
+  height: 62px;
+  width: 92px;
+
+  background: linear-gradient(to right, $blue 40px, $green 40px 66px, $blue 66px 92px);
+  background-image: url("../img/group1.png");
+}
+
+.logo__back:nth-child(2) {
+  height: 54px;
+  width: 96px;
+
+  background: linear-gradient(to right, $green 32px, $blue 32px 44px, $green 44px 70px, $blue 70px 98px);
+  background-image: url("../img/group2.png");
+}
+
+.logo b {
+  position: absolute;
+  top: 27px;
+  left: 6px;
+
+  font-family: myriad-pro, sans-serif;
+  font-size: 42px;
+  line-height: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+@media(min-width: $width-2) {
+  .logo {
+    margin: 0 98px 0 0;
+  }
+}

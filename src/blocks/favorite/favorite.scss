@@ -1,0 +1,42 @@
+.favorite__item {
+  padding-bottom: 0;
+
+  padding: 0 0 15px 0;
+}
+
+.favorite__header {
+  font-size: 17px;
+  line-height: 37px;
+
+  margin-bottom: 14px;
+}
+
+.favorite__img {
+  margin-left: 3px;
+}
+
+.favorite__content a {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 5px;
+
+  font-size: 13px;
+  line-height: 28px;
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media(min-width: $width-2) {
+  .favorite__content {
+    padding-right: 22px;
+    width: 212px;
+  }
+}

@@ -1,0 +1,136 @@
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.nav__list {
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav__item a {
+  display: block;
+  min-width: 106px;
+
+  font-size: 18px;
+  line-height: 37px;
+  text-align: center;
+
+  padding: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.nav__item:nth-child(1) a,
+.nav__item:nth-child(4) a {
+  background-color: $blue;
+}
+
+.nav__item:nth-child(2) a {
+  background-color: $green;
+}
+
+.nav__item:nth-child(3) a {
+  background-color: $violet;
+}
+
+.nav__item:nth-child(5) a {
+  background-color: $orange;
+}
+
+.nav__item:nth-child(6) a {
+  background-color: $red;
+}
+
+.nav__item:last-child {
+
+  & a {
+    background-color: $grey;
+  }
+}
+
+.nav__list--nojs {
+  display: block;
+}
+
+.nav__list--open { //для открытия меню
+  display: block;
+  animation-name: slideInDown, fadeIn;
+  animation-duration: 0.3s, 1s;
+}
+
+@media(min-width: $width-1) {
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media(min-width: 860px) {
+  .nav__item:last-child {
+    flex-grow: 1;
+
+    & a {
+    text-align: left;
+    padding-left: 15px;
+    }
+  }
+}

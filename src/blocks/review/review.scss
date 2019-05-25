@@ -1,0 +1,61 @@
+.review__header {
+  position: relative;
+
+  font-size: 35px;
+  line-height: 47px;
+
+  margin: 0 0 6px 0;
+  padding-left: 80px;
+}
+
+.review__date {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+
+  width: 68px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.review__day {
+  background-color: $orange;
+
+  padding: 5px 0;
+
+  font-size: 35px;
+  line-height: 37px;
+  color: #ebebeb;
+}
+
+.review__month {
+  background-color: $blue;
+
+  font-size: 19px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.review__text {
+  font-size: 14px;
+  line-height: 20px;
+
+  margin: 0 0 18px 0;
+}
+
+.review__text:nth-of-type(2) {
+  margin-bottom: 28px;
+}
+
+@media(min-width: $width-2) {
+  .review__date {
+    top: 10px;
+    left: -76px;
+  }
+
+  .review__header {
+    padding-left: 0;
+  }
+}
